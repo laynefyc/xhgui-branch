@@ -34,6 +34,11 @@
                         {{ helpers.sort_link('内存占用峰值', base_url, 'pmu', paging, search) }}
                     </span>
                 </th>
+                <th class="right">
+                    <span class="tip" title="IP地址">
+                        IP地址
+                    </span>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -69,6 +74,7 @@
             <td class="right">{{ result.get('main()', 'cpu') |as_time }}</td>
             <td class="right">{{ result.get('main()', 'mu') |as_bytes }}</td>
             <td class="right">{{ result.get('main()', 'pmu') |as_bytes }}</td>
+            <td class="right">{{ result.meta('SERVER.REMOTE_ADDR') }}</td>
         </tr>
         {% else %}
         <tr>
