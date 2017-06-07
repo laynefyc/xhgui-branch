@@ -14,6 +14,9 @@ class Xhgui_Controller_Custom extends Xhgui_Controller
     public function get()
     {
         $this->_template = 'custom/create.twig';
+        $this->set(array(
+            'title' => '自定义查询'
+        ));
     }
 
     public function help()
@@ -26,7 +29,8 @@ class Xhgui_Controller_Custom extends Xhgui_Controller
         }
         $this->_template = 'custom/help.twig';
         $this->set(array(
-            'data' => print_r($res->toArray(), 1)
+            'data' => print_r($res->toArray(), 1),
+            'title' => '自定义查询'
         ));
     }
 

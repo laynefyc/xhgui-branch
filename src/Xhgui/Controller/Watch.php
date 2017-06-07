@@ -17,7 +17,7 @@ class Xhgui_Controller_Watch extends Xhgui_Controller
         $watched = $this->_watches->getAll();
 
         $this->_template = 'watch/list.twig';
-        $this->set(array('watched' => $watched));
+        $this->set(array('watched' => $watched,'title' => '函数监控'));
     }
 
     public function post()
