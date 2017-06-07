@@ -23,7 +23,7 @@ return array(
     // 'username', 'password' and 'db' (where the user is added)
     'db.options' => array(),
     'templates.path' => dirname(__DIR__) . '/src/templates',
-    'date.format' => 'M jS H:i:s',
+    'date.format' => 'Y-m-d H:i:s',
     'detail.count' => 6,
     'page.limit' => 25,
 

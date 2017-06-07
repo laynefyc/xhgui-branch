@@ -2,30 +2,30 @@
 {% import 'macros/helpers.twig' as helpers %}
 
 {% block title %}
-- Symbol - {{ symbol }}
+- 函数详细 - {{ symbol }}
 {% endblock %}
 
 {% block content %}
 <div class="row-fluid">
-    <a class="back-link" href="{{ url('run.view', {'id': id}) }}">&laquo; Back to run</a>
-    <h1>Function Details</h1>
+    <a class="back-link" href="{{ url('run.view', {'id': id}) }}">&laquo; 返回</a>
+    <h1>函数详细</h1>
     <h3 class="function-name">{{ symbol }}</h3>
 </div>
 <div class="row-fluid">
-    <h3>Current function</h3>
+    <h3>当前函数</h3>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Function</th>
-                <th>Call Count</th>
-                <th>Self Wall Time</th>
-                <th>Self CPU</th>
-                <th>Self Memory Usage</th>
-                <th>Self Peak Memory Usage</th>
-                <th>Inclusive Wall Time</th>
-                <th>Inclusive CPU</th>
-                <th>Inclusive Memory Usage</th>
-                <th>Inclusive Peak Memory Usage</th>
+                <th>函数</th>
+                <th>调用次数</th>
+                <th>自身执行时间</th>
+                <th>自身CPU时间</th>
+                <th>自身内存占用</th>
+                <th>自身内存占用峰值</th>
+                <th>包含执行时间</th>
+                <th>包含CPU时间</th>
+                <th>包含内存占用</th>
+                <th>包含内存占用峰值</th>
             </tr>
         </thead>
         <tbody>
@@ -54,21 +54,20 @@
         </tbody>
     </table>
 
-    <h3>Parent functions</h3>
+    <h3>父函数</h3>
     <table class="table table-hover table-sort">
         <thead>
             <tr>
-                <th>Function</th>
-                <th>Call Count</th>
-                <th>Self Wall Time</th>
-                <th>Self CPU</th>
-                <th>Self Memory Usage</th>
-                <th>Self Peak Memory Usage</th>
-
-                <th>Inclusive Wall Time</th>
-                <th>Inclusive CPU</th>
-                <th>Inclusive Memory Usage</th>
-                <th>Inclusive Peak Memory Usage</th>
+                <th>函数</th>
+                <th>调用次数</th>
+                <th>自身执行时间</th>
+                <th>自身CPU时间</th>
+                <th>自身内存占用</th>
+                <th>自身内存占用峰值</th>
+                <th>包含执行时间</th>
+                <th>包含CPU时间</th>
+                <th>包含内存占用</th>
+                <th>包含内存占用峰值</th>
             </tr>
         </thead>
         <tbody>
@@ -99,17 +98,17 @@
         </tbody>
     </table>
 
-    <h3>Child functions</h3>
+    <h3>子函数</h3>
     <table class="table table-hover table-sort">
         <thead>
             <tr>
-                <th>Function</th>
-                <th>Call Count</th>
+                <th>函数</th>
+                <th>调用次数</th>
 
-                <th>Inclusive Wall Time</th>
-                <th>Inclusive CPU</th>
-                <th>Inclusive Memory Usage</th>
-                <th>Inclusive Peak Memory Usage</th>
+                <th>包含执行时间</th>
+                <th>包含CPU时间</th>
+                <th>包含内存占用</th>
+                <th>包含内存占用峰值</th>
             </tr>
         </thead>
         <tbody>
@@ -132,7 +131,7 @@
         </tr>
         {% else %}
         <tr>
-            <td colspan="6">{{ symbol }} called no functions.</td>
+            <td colspan="6">{{ symbol }} 没有调用函数。</td>
         </tr>
         {% endfor %}
         </tbody>

@@ -2,19 +2,17 @@
 {% import 'macros/helpers.twig' as helpers %}
 
 {% block title %}
-- Watch - list
+- 观察列表 -
 {% endblock %}
 
 {% block content %}
-<h1>Watch functions</h1>
+<h1>观察函数</h1>
 
 <p>
-Watch functions allow you to set function name/patterns that
-you want to see at the top of each run result page.
+    观察函数允许你设置函数名称或模式用于显示在每个运行结果页面的顶部
 </p>
 <p>
-Watches can either be exact matches or use PCRE patterns
-to match multiple function names.
+    观察函数可以精确匹配或使用PCRE模式匹配多个函数的名字。
 </p>
 
 <form class="form-stacked" action="{{ url('watch.save') }}" method="post">
@@ -25,29 +23,28 @@ to match multiple function names.
             <input name="watch[{{ i }}][_id]" type="hidden" value="{{ watch._id }}" />
             <input name="watch[{{ i }}][removed]" type="hidden" class="removed" value="0" />
             <input class="input-xlarge" name="watch[{{ i }}][name]" type="text" value="{{ watch.name }}" />
-            <a href="#" class="btn btn-small btn-warning watch-delete">Remove</a>
+            <a href="#" class="btn btn-small btn-warning watch-delete">删除</a>
         </li>
         {% endfor %}
         <li id="new-row-template">
             <input class="input-xlarge" name="watch[{{ watched|length }}][name]" type="text" />
-            <a href="#" class="btn btn-small btn-warning watch-delete">Remove</a>
+            <a href="#" class="btn btn-small btn-warning watch-delete">删除</a>
         </li>
     </ul>
     <p class="offset2">
-        <a href="#" id="add-new-watch" class="btn">Add another</a>
+        <a href="#" id="add-new-watch" class="btn">添加一个</a>
     </p>
 
     <div class="form-actions">
-        <input class="btn btn-large btn-primary" type="submit" value="Save" />
+        <input class="btn btn-large btn-primary" type="submit" value="保存" />
     </div>
 {% else %}
     <div class="hero-unit">
-        <h3>You have no watch functions</h3>
-        <p>Watch functions let you pluck function names
-        you're interested in to the top of run reports.</p>
-        <p>Add one to get started</p>
+        <h3>你还没有观察函数</h3>
+        <p>观察函数可以让你感兴趣的函数显示在运行结果中。</p>
+        <p>开始添加一个</p>
         <input name="watch[0][name]" type="text" />
-        <input class="btn btn-primary" type="submit" value="Save" />
+        <input class="btn btn-primary" type="submit" value="保存" />
     </div>
 {% endif %}
 

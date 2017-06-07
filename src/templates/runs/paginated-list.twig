@@ -8,30 +8,30 @@
                 <th>&nbsp;</th>
                 {% endif %}
                 <th>
-                  Method
+                  方法
                 </th>
-                <th>URL</th>
+                <th>请求地址</th>
                 <th>
-                    {{ helpers.sort_link('Time', base_url, 'time', paging, search) }}
+                    {{ helpers.sort_link('时间', base_url, 'time', paging, search) }}
                 </th>
                 <th class="right">
-                    <span class="tip" title="Wall time">
-                        {{ helpers.sort_link('wt', base_url, 'wt', paging, search) }}
+                    <span class="tip" title="执行时间">
+                        {{ helpers.sort_link('执行时间', base_url, 'wt', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="CPU time">
-                        {{ helpers.sort_link('cpu', base_url, 'cpu', paging, search) }}
+                    <span class="tip" title="CPU 时间">
+                        {{ helpers.sort_link('CPU时间', base_url, 'cpu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="Memory Usage">
-                        {{ helpers.sort_link('mu', base_url, 'mu', paging, search) }}
+                    <span class="tip" title="内存占用">
+                        {{ helpers.sort_link('内存占用', base_url, 'mu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="Peak Memory">
-                        {{ helpers.sort_link('pmu', base_url, 'pmu', paging, search) }}
+                    <span class="tip" title="内存占用峰值">
+                        {{ helpers.sort_link('内存占用峰值', base_url, 'pmu', paging, search) }}
                     </span>
                 </th>
             </tr>
@@ -42,7 +42,7 @@
             {% if show_compare_link %}
             <td>
                 <a class="btn btn-small" href="{{ url('run.compare', {base: base_run.id|trim, head: result.id|trim}) }}">
-                Compare
+                对比
                 </a>
             </td>
             {% endif %}
@@ -73,7 +73,7 @@
         {% else %}
         <tr>
             <td colspan="6" class="no-results">
-                Your search conditions matched no runs. Try changing you search criteria.
+                你的搜索条件没有匹配的结果，改变搜索条件试试。
             </td>
         </tr>
         {% endfor %}

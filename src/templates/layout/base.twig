@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Xhgui {% block title '' %}</title>
+    <title>PHP性能分析平台 {% block title '' %}</title>
     <link href="{{ static('css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
     <link href="{{ static('css/datepicker.css') }}" rel="stylesheet" media="screen">
     <link href="{{ static('css/xhgui.css') }}" rel="stylesheet" media="screen">
@@ -17,16 +17,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="{{ url('home') }}">XHG</a>
+                <a class="brand" href="{{ url('home') }}">PHP性能分析平台</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><a href="{{ url('home') }}">Recent</a></li>
-                        <li><a href="{{ url('home', {'sort': 'wt'}) }}">Longest wall time</a></li>
-                        <li><a href="{{ url('home', {'sort': 'cpu'}) }}">Most CPU</a></li>
-                        <li><a href="{{ url('home', {'sort': 'mu'}) }}">Most memory</a></li>
-                        <li><a href="{{ url('custom.view') }}">Custom View</a></li>
-                        <li><a href="{{ url('watch.list') }}">Watch Functions</a></li>
-                        <li><a href="{{ url('waterfall.list') }}">Waterfall</a></li>
+                        <li><a href="{{ url('home') }}">最近运行</a></li>
+                        <li><a href="{{ url('home', {'sort': 'wt'}) }}">按执行时间排序</a></li>
+                        <li><a href="{{ url('home', {'sort': 'cpu'}) }}">按CPU时间排序</a></li>
+                        <li><a href="{{ url('home', {'sort': 'mu'}) }}">按内存占用排序</a></li>
+                        <li><a href="{{ url('custom.view') }}">自定义查询</a></li>
+                        <li><a href="{{ url('watch.list') }}">观察函数</a></li>
+                        <li><a href="{{ url('waterfall.list') }}">瀑布视图</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -45,7 +45,7 @@
         <hr>
 
         <footer class="row-fluid footer-text">
-            <span class="span4">© Paul Reinheimer &amp; Mark Story 2012</span>
+            <span class="span4">© 版权所有 PHP性能分析平台 2013 - 2016</span>
             <span class="span4">1,000,000 µs = 1 second</span>
             <span class="span4">1,048,576 bytes = 1 MB</span>
         </footer>

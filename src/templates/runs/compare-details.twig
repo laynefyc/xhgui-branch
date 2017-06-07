@@ -1,21 +1,21 @@
 {# Template fragment for comparing two runs. #}
-<h3>Summary</h3>
+<h3>摘要</h3>
 <table class="table table-striped">
     <thead>
         <tr>
             <th>&nbsp;</th>
-            <th class="right">Number of function calls</th>
-            <th class="right">Inclusive Wall time</th>
-            <th class="right">Inclusive CPU</th>
-            <th class="right">Inclusive Memory</th>
-            <th class="right">Inclusive Peak Memory</th>
+            <th class="right">调用函数数量</th>
+            <th class="right">包含执行时间</th>
+            <th class="right">包含CPU时间</th>
+            <th class="right">包含内存占用</th>
+            <th class="right">包含内存占用峰值</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <th>
                 <span class="badge compare-base">
-                    base - {{ comparison.base.date|date(date_format) }}
+                    基础 - {{ comparison.base.date|date(date_format) }}
                 </span>
                 <a target="_blank" href="{{ url('run.view', {id: comparison.base.id|trim}) }}">
                     {{ comparison.base.id }}
@@ -30,7 +30,7 @@
         <tr>
             <th>
                 <span class="badge compare-head">
-                    new - {{ comparison.head.date|date(date_format) }}
+                    新 - {{ comparison.head.date|date(date_format) }}
                 </span>
                 <a target="_blank" href="{{ url('run.view', {id: comparison.head.id|trim}) }}">
                     {{ comparison.head.id }}
@@ -43,7 +43,7 @@
             <td class="right">{{ comparison.head.get('main()', 'pmu') |as_bytes }}</td>
         </tr>
         <tr>
-            <th>Difference</th>
+            <th>差异</th>
             <td class="right">{{ comparison.diff.functionCount }}</td>
             <td class="right">{{ comparison.diff['main()'].wt|as_time }}</td>
             <td class="right">{{ comparison.diff['main()'].cpu|as_time }}</td>
@@ -51,7 +51,7 @@
             <td class="right">{{ comparison.diff['main()'].pmu|as_bytes }}</td>
         </tr>
         <tr>
-            <th>Difference %</th>
+            <th>差异 %</th>
             <td class="right">{{ comparison.diffPercent.functionCount|as_percent }}</td>
             <td class="right">{{ comparison.diffPercent['main()'].wt|as_percent }}</td>
             <td class="right">{{ comparison.diffPercent['main()'].cpu|as_percent }}</td>
@@ -63,24 +63,24 @@
 
 
 <div class="pull-right form-search">
-  <input type="search" id="function-filter" placeholder="Filter by function name" />
+  <input type="search" id="function-filter" placeholder="根据函数过滤" />
 </div>
 
-<h3>Details</h3>
+<h3>详细</h3>
 
 <table class="table table-hover table-sort" id="filter-table">
     <thead>
         <tr>
-            <th>Function</th>
-            <th>Call Count</th>
-            <th>Self Wall Time</th>
-            <th>Self CPU</th>
-            <th>Self Memory Usage</th>
-            <th>Self Peak Memory Usage</th>
-            <th>Inclusive Wall Time</th>
-            <th>Inclusive CPU</th>
-            <th>Inclusive Memory Usage</th>
-            <th>Inclusive Peak Memory Usage</th>
+            <th>函数</th>
+            <th>调用次数</th>
+            <th>自身执行时间</th>
+            <th>自身CPU时间</th>
+            <th>自身内存占用</th>
+            <th>自身内存占用峰值</th>
+            <th>包含执行时间</th>
+            <th>包含CPU时间</th>
+            <th>包含内存占用</th>
+            <th>包含内存占用峰值</th>
         </tr>
     </thead>
     <tbody>
