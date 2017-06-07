@@ -90,12 +90,22 @@ class Xhgui_Twig_Extension extends Twig_Extension
 
     public function formatBytes($value)
     {
-        return number_format((float)$value) . '&nbsp;<span class="units">bytes</span>';
+        $val = round($value/1048576,1);
+        if($val==0)
+        {
+            $val = round($value/1048576);
+        }
+        return $val . '&nbsp;<span class="units">MB</span>';
     }
 
     public function formatTime($value)
     {
-        return number_format((float)$value) . '&nbsp;<span class="units">µs</span>';
+        $val = round($value/1000,1);
+        if($val==0)
+        {
+            $val = round($value/1000);
+        }
+        return $val . '&nbsp;<span class="units">ms</span>';
     }
 
     public function formatDiff($value)
