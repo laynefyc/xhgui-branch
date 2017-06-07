@@ -20,7 +20,7 @@
                 <a class="brand" href="{{ url('home') }}">PHP性能分析平台</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li {% if title=='最近运行' %} class="current" {% endif %}<a href="{{ url('home') }}">最近运行</a></li>
+                        <li {% if title=='最近运行' %} class="current" {% endif %}><a href="{{ url('home') }}">最近运行</a></li>
                         <li {% if title=='执行时间' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'wt'}) }}">执行时间</a></li>
                         <li {% if title=='CPU时间' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'cpu'}) }}">CPU时间</a></li>
                         <li {% if title=='内存使用' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'mu'}) }}">内存使用</a></li>
