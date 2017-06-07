@@ -7,8 +7,8 @@
   <div class="row-fluid">
 
     <div class="span3">
-      <h2>Selection Criteria</h2>
-      <p>This is how values will be selected for graphing</p>
+      <h2>选择查询条件</h2>
+      <p>这个参数将会在生成的图中显示</p>
       <form>
         <textarea id="selection">{"meta.url" : "/index.php"}</textarea>
       </form>
@@ -17,16 +17,16 @@
 
 
     <div class="span3">
-      <h2>Values to Retrieve</h2>
-      <p>Values that should be retrieved, and put in the table</p>
+      <h2>选择具体参数</h2>
+      <p>被选择的参数将会在表格中显示</p>
       <form>
         <textarea id="retrieve">{"meta" : true, "profile.main()" : true}</textarea>
       </form>
     </div><!--/span-->
 
     <div class="span3">
-      <h2>Values to Graph</h2>
-      <p>These are things that should end up on the graph.</p>
+      <h2>绘图参数</h2>
+      <p>这些参数将被绘制成曲线图。</p>
       <form>
         <textarea id="graph">{"meta" : true, "profile.main()" : true}</textarea>
       </form>
@@ -43,7 +43,7 @@
 
     <div class="span12">
         <div class="btn btn-large" style="display: block; margin-left: auto; margin-right: auto; width: 150px;" id="runbutton">运行</div>
-		<div style="display: block; margin-left: auto; margin-right: auto; width: 150px; display: none" id="loading"><img src="{{ static('/img/loading.gif') }}"></div>
+		<div style="display: block; margin-left: auto; margin-right: auto; width: 150px; display: none" id="loading"><img src="{{ static('img/loading.gif') }}"></div>
     </div><!--/span-->
 
 
