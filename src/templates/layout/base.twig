@@ -20,10 +20,10 @@
                 <a class="brand" href="{{ url('home') }}">PHP性能分析平台</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><a href="{{ url('home') }}">最近运行</a></li>
-                        <li><a href="{{ url('home', {'sort': 'wt'}) }}">按执行时间排序</a></li>
-                        <li><a href="{{ url('home', {'sort': 'cpu'}) }}">按CPU时间排序</a></li>
-                        <li><a href="{{ url('home', {'sort': 'mu'}) }}">按内存占用排序</a></li>
+                        <li {% if title=='最近运行' %} class="current" {% endif %}<a href="{{ url('home') }}">最近运行</a></li>
+                        <li {% if title=='执行时间' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'wt'}) }}">执行时间</a></li>
+                        <li {% if title=='CPU时间' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'cpu'}) }}">CPU时间</a></li>
+                        <li {% if title=='内存使用' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'mu'}) }}">内存使用</a></li>
                         <li><a href="{{ url('custom.view') }}">自定义查询</a></li>
                         <li><a href="{{ url('watch.list') }}">观察函数</a></li>
                         <li><a href="{{ url('waterfall.list') }}">瀑布视图</a></li>

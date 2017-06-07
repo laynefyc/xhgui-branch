@@ -70,6 +70,9 @@ h1, h2, h3, h4, h5, h6,
 .navbar .nav > li > a {
     color: #444;
 }
+.navbar .nav .current {
+    background-color:#a7ef67;
+}
 .navbar .brand {
     border-right: 1px solid rgb(212, 212, 212);
     -webkit-box-shadow: 1px 0px 1px white;

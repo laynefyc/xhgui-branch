@@ -34,7 +34,7 @@ class Xhgui_Controller_Run extends Xhgui_Controller
         $title = '最近运行';
         $titleMap = array(
             'wt' => '执行时间',
-            'cpu' => 'CPU 时间',
+            'cpu' => 'CPU时间',
             'mu' => '内存使用',
         );
         if (isset($titleMap[$sort])) {
