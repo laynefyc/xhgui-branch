@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-<h1>Waterfall visualization</h1>
 
 <div class="searchbar clearfix">
     <a href="#" class="pull-right btn btn-small search-expand" title="Show search form">
@@ -20,7 +19,7 @@
             <div class="controls">
                 <input type="text" class="span2" name="request_start" value="{{ search.request_start }}">
                 <input type="text" class="span2" name="request_end" value="{{ search.request_end }}">
-                <small class="muted">Either unix timestamps or date time string formatted as YYYY-MM-DD H:i:s</small>
+                <small class="muted">时间格式：YYYY-MM-DD H:i:s</small>
             </div>
         </div>
         <div class="control-group span4">
@@ -57,33 +56,38 @@
         <thead>
             <tr>
                 {% if show_compare_link %}
-                <th>&nbsp;</th>
+                    <th>&nbsp;</th>
                 {% endif %}
                 <th>
-                  Method
+                    方法
                 </th>
-                <th>URL</th>
+                <th>请求地址</th>
                 <th>
-                    {{ helpers.sort_link('Time', base_url, 'time', paging, search) }}
+                    {{ helpers.sort_link('时间', base_url, 'time', paging, search) }}
                 </th>
                 <th class="right">
-                    <span class="tip" title="Wall time">
-                        {{ helpers.sort_link('wt', base_url, 'wt', paging, search) }}
+                    <span class="tip" title="执行时间">
+                        {{ helpers.sort_link('执行时间', base_url, 'wt', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="CPU time">
-                        {{ helpers.sort_link('cpu', base_url, 'cpu', paging, search) }}
+                    <span class="tip" title="CPU 时间">
+                        {{ helpers.sort_link('CPU时间', base_url, 'cpu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="Memory Usage">
-                        {{ helpers.sort_link('mu', base_url, 'mu', paging, search) }}
+                    <span class="tip" title="内存占用">
+                        {{ helpers.sort_link('内存占用', base_url, 'mu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="Peak Memory">
-                        {{ helpers.sort_link('pmu', base_url, 'pmu', paging, search) }}
+                    <span class="tip" title="内存占用峰值">
+                        {{ helpers.sort_link('内存占用峰值', base_url, 'pmu', paging, search) }}
+                    </span>
+                </th>
+                <th class="right">
+                    <span class="tip" title="IP地址">
+                        IP地址
                     </span>
                 </th>
             </tr>
@@ -109,6 +113,8 @@
             <td class="right">{{ result.get('main()', 'cpu') |as_time }}</td>
             <td class="right">{{ result.get('main()', 'mu') |as_bytes }}</td>
             <td class="right">{{ result.get('main()', 'pmu') |as_bytes }}</td>
+            <td class="right"><a href="{{ url('waterfall.list', {'remote_addr': result.meta.SERVER.REMOTE_ADDR, 'request_start': result.meta.SERVER.REQUEST_TIME - 5, 'request_end': result.meta.SERVER.REQUEST_TIME + 15}) }}">{{ result.meta.SERVER.REMOTE_ADDR }}</a>
+            </td>
         </tr>
         {% else %}
         <tr>

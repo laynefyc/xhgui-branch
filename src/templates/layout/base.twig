@@ -26,7 +26,7 @@
                         <li {% if title=='内存使用' %} class="current" {% endif %}><a href="{{ url('home', {'sort': 'mu'}) }}">内存使用</a></li>
                         <li><a href="{{ url('custom.view') }}">自定义查询</a></li>
                         <li><a href="{{ url('watch.list') }}">观察函数</a></li>
-                        <li><a href="{{ url('waterfall.list') }}">瀑布视图</a></li>
+                        <li {% if title=='瀑布图' %} class="current" {% endif %}><a href="{{ url('waterfall.list') }}">瀑布图</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

@@ -21,6 +21,9 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
                 $search[$key] = trim($request->get($key));
             }
         }
+        $search['request_start'] = isset($search['request_start'])?date('Y-m-d H:i:s',$search['request_start']):'';
+        $search['request_end'] = isset($search['request_end'])?date('Y-m-d H:i:s',$search['request_end']):'';
+
         $result = $this->_profiles->getAll(array(
             'sort' => 'time',
             'direction' => 'asc',
@@ -41,6 +44,7 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
             'search' => $search,
             'paging' => $paging,
             'base_url' => 'waterfall.list',
+            'title' => '瀑布图'
         ));
     }
 
