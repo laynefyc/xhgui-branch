@@ -24,12 +24,12 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
 
         if(isset($search['request_start']) && strpos($search['request_start'],':')!==false)
         {
-            $search['request_start'] = strtotime('Y-m-d H:i:s',$search['request_start']);
+            $search['request_start'] = strtotime($search['request_start']);
         }
 
         if(isset($search['request_end']) && strpos($search['request_end'],':')!==false)
         {
-            $search['request_start'] = strtotime('Y-m-d H:i:s',$search['request_end']);
+            $search['request_start'] = strtotime($search['request_end']);
             //$search['request_end'] = date('Y-m-d H:i:s',$search['request_end']);
         }
 
