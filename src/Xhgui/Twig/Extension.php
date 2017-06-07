@@ -48,6 +48,7 @@ class Xhgui_Twig_Extension extends Twig_Extension
 
     public function truncate($input, $length = 50)
     {
+        $input = urldecode($input);
         if (strlen($input) < $length) {
             return $input;
         }
