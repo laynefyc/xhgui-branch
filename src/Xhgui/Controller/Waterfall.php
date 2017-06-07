@@ -22,12 +22,12 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
             }
         }
 
-        if(isset($search['request_start']) && strpos($search['request_start'],':')!==false)
+        if(isset($search['request_start']) && strpos($search['request_start'],'-')!==false)
         {
             $search['request_start'] = strtotime($search['request_start']);
         }
 
-        if(isset($search['request_end']) && strpos($search['request_end'],':')!==false)
+        if(isset($search['request_end']) && strpos($search['request_end'],'-')!==false)
         {
             $search['request_start'] = strtotime($search['request_end']);
             //$search['request_end'] = date('Y-m-d H:i:s',$search['request_end']);
@@ -50,11 +50,11 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
         $this->_template = 'waterfall/list.twig';
 
 
-        if(isset($search['request_start']))
+        if(isset($search['request_start'])&& strpos($search['request_start'],'-')===false)
         {
             $search['request_start'] = date('Y-m-d H:i:s',$search['request_start']);
         }
-        if(isset($search['request_end']))
+        if(isset($search['request_end'])&& strpos($search['request_end'],'-')===false)
         {
             $search['request_end'] = date('Y-m-d H:i:s',$search['request_end']);
         }
