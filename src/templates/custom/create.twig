@@ -45,23 +45,17 @@
         <div class="btn btn-large" style="display: block; margin-left: auto; margin-right: auto; width: 150px;" id="runbutton">运行</div>
 		<div style="display: block; margin-left: auto; margin-right: auto; width: 150px; display: none" id="loading"><img src="{{ static('img/loading.gif') }}"></div>
     </div><!--/span-->
-
-
-
-
-
-
   
   </div><!--/row-->
   <table class="table table-hover" id="results">
     <thead>
         <tr>
-            <th>URL</th>
-            <th>Time</th>
-            <th class="right"><span class="tip" title="Wall time">wt</span></th>
-            <th class="right"><span class="tip" title="CPU time">cpu</span></th>
-            <th class="right"><span class="tip" title="Memory Usage">mu</span></th>
-            <th class="right"><span class="tip" title="Peak Memory Usage">pmu</span></th>
+            <th>请求地址</th>
+            <th>时间</th>
+            <th><span class="tip" title="执行时间	">执行时间</span></th>
+            <th><span class="tip" title="CPU时间">CPU时间</span></th>
+            <th><span class="tip" title="内存占用">内存占用</span></th>
+            <th><span class="tip" title="内存峰值">内存峰值</span></th>
         </tr>
     </thead>
     <tbody>

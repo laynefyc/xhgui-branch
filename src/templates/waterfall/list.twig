@@ -17,8 +17,8 @@
         <div class="control-group span4">
             <label class="control-label" for="start_date">时间范围</label>
             <div class="controls">
-                <input type="text" class="datepicker span2" data-date-format="yyyy-mm-dd H:i:s" id="request_start" name="request_start" value="{{ search.request_start }}">
-                <input type="text" class="datepicker span2" data-date-format="yyyy-mm-dd H:i:s" id="request_end" name="request_end" value="{{ search.request_end }}">
+                <input class="layui-input"  name="request_start" value="{{ search.request_start }}" placeholder="自定义日期格式" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                <input class="layui-input"  name="request_end" value="{{ search.request_end }}" placeholder="自定义日期格式" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
             </div>
         </div>
         <div class="control-group span4">
@@ -42,8 +42,8 @@
 <div class="row-fluid">
     {% if search is empty %}
     <div class="alert alert-info alert-block">
-        <h4>No data</h4>
-        <p>You need to do a search in order to see a waterfall graph.</p>
+        <h4>没有数据</h4>
+        <p>你需要设置一个搜索条件，IP或者Cookie</p>
     </div>
     {% else %}
     <div id="waterfall" class="chart-container waterfall"></div>
@@ -80,8 +80,8 @@
                     </span>
                 </th>
                 <th class="right">
-                    <span class="tip" title="内存占用峰值">
-                        {{ helpers.sort_link('内存占用峰值', base_url, 'pmu', paging, search) }}
+                    <span class="tip" title="内存峰值">
+                        {{ helpers.sort_link('内存峰值', base_url, 'pmu', paging, search) }}
                     </span>
                 </th>
                 <th class="right">
@@ -115,7 +115,11 @@
                 {'url': result.meta.simple_url}
                 ) }}
             </td>
-            <td><a href="{{ url('run.view', {'id': result.id|trim }) }}">{{ result.date|date(date_format) }}</a></td>
+            <td>
+                <a href="{{ url('run.view', {'id': result.id|trim }) }}">
+                    {{ result.date|date(date_format) }}
+                </a>
+            </td>
             <td class="right">{{ result.get('main()', 'wt') |as_time }}</td>
             <td class="right">{{ result.get('main()', 'cpu') |as_time }}</td>
             <td class="right">{{ result.get('main()', 'mu') |as_bytes }}</td>
