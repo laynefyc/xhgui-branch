@@ -7,9 +7,6 @@
 
 {% block content %}
 <div class="row-fluid">
-    <h1>{{ result.meta('SERVER.REQUEST_METHOD')}} {{ result.meta.url }}的分析数据</h1>
-</div>
-<div class="row-fluid">
 <div class="span3">
     <div class="sidebar-nav" style="height:840px;overflow: auto;">
         <ul class="nav nav-list">
@@ -51,7 +48,7 @@
             跳转到函数
         </a>
 
-        <h2>Watch Functions</h2>
+        <h2>监控的函数</h2>
 
         <table class="table table-hover">
         <thead>
@@ -91,23 +88,23 @@
 
     <div class="row-fluid">
         <div class="span6">
-          <h2>最长自身执行时间</h2>
+          <h2>执行耗时图</h2>
           <div id="wall-time-chart" class="chart-container"></div>
           <dl>
           {% for value in wall_time %}
               <dt class="text-wrap">{{ value.name }}</dt>
-              <dd>{{ value.value|as_time }}</dd>
+              <dd>{{ value.value }} ms</dd>
           {% endfor %}
           </dl>
         </div>
 
         <div class="span6">
-          <h2>最大内存占用</h2>
+          <h2>内存消耗图</h2>
           <div id="memory-usage-chart" class="chart-container"></div>
           <dl>
           {% for value in memory %}
               <dt class="text-wrap">{{ value.name }}</dt>
-              <dd>{{ value.value|as_bytes }}</dd>
+              <dd>{{ value.value }} MB</dd>
           {% endfor %}
           </dl>
         </div>
@@ -128,14 +125,14 @@
         <tr>
             <th>函数</th>
             <th>调用次数</th>
-            <th>自身执行时间</th>
-            <th>自身CPU时间</th>
-            <th>自身内存占用</th>
-            <th>自身内存占用峰值</th>
-            <th>包含执行时间</th>
-            <th>包含CPU时间</th>
-            <th>包含内存占用</th>
-            <th>包含内存占用峰值</th>
+            <th>执行时间</th>
+            <th>CPU时间</th>
+            <th>内存占用</th>
+            <th>内存峰值</th>
+            <th>总执行时间</th>
+            <th>总CPU时间</th>
+            <th>总内存占用</th>
+            <th>总内存峰值</th>
         </tr>
     </thead>
     <tbody>
@@ -149,15 +146,15 @@
                 {'id': result.id|trim, 'symbol': key}
             ) }}
         </td>
-        <td class="right">{{ value.ct }}</td>
-        <td class="right">{{ value.ewt|as_time }}</td>
-        <td class="right">{{ value.ecpu|as_time }}</td>
-        <td class="right">{{ value.emu|as_bytes }}</td>
-        <td class="right">{{ value.epmu|as_bytes }}</td>
-        <td class="right">{{ value.wt|as_time }}</td>
-        <td class="right">{{ value.cpu|as_time }}</td>
-        <td class="right">{{ value.mu|as_bytes }}</td>
-        <td class="right">{{ value.pmu|as_bytes }}</td>
+        <td class="center">{{ value.ct }}</td>
+        <td class="center">{{ value.ewt|as_time }}</td>
+        <td class="center">{{ value.ecpu|as_time }}</td>
+        <td class="center">{{ value.emu|as_bytes }}</td>
+        <td class="center">{{ value.epmu|as_bytes }}</td>
+        <td class="center">{{ value.wt|as_time }}</td>
+        <td class="center">{{ value.cpu|as_time }}</td>
+        <td class="center">{{ value.mu|as_bytes }}</td>
+        <td class="center">{{ value.pmu|as_bytes }}</td>
     </tr>
     {% endfor %}
     </tbody>
@@ -172,13 +169,13 @@ $(document).ready(function () {
     Xhgui.columnchart('#wall-time-chart', wallTime, {
         width: 350,
         height: 300,
-        postfix: ' \u00b5s'
+        postfix: ' ms'
     });
     var memoryData = {{ memory|json_encode|raw }};
     Xhgui.columnchart('#memory-usage-chart', memoryData, {
         width: 350,
         height: 300,
-        postfix: ' bytes'
+        postfix: ' MB'
     });
 
     var rows = $('#function-calls tbody tr');

@@ -72,8 +72,26 @@ class Xhgui_Controller_Run extends Xhgui_Controller
         // Self wall time graph
         $timeChart = $result->extractDimension('ewt', $detailCount);
 
+        foreach($timeChart as $k=>$val){
+            $v = round($val['value']/1000,1);
+            if($v==0)
+            {
+                $v = round($val['value']/1000);
+            }
+            $timeChart[$k]['value'] = $v;
+        }
+
         // Memory Block
         $memoryChart = $result->extractDimension('emu', $detailCount);
+
+        foreach($timeChart as $k=>$val){
+            $v = round($val['value']/1048576,1);
+            if($v==0)
+            {
+                $v = round($val['value']/1048576);
+            }
+            $timeChart[$k]['value'] = $v;
+        }
 
         // Watched Functions Block
         $watchedFunctions = array();
@@ -94,6 +112,7 @@ class Xhgui_Controller_Run extends Xhgui_Controller
             'memory' => $memoryChart,
             'watches' => $watchedFunctions,
             'date_format' => $this->_app->config('date.format'),
+            'title' => '函数监控'
         ));
     }
 
