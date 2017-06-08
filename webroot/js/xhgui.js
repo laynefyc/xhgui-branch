@@ -20,8 +20,6 @@ $(document).ready(function () {
     var tables = $('.table-sort');
     Xhgui.tableSort(tables);
 
-    $('.datepicker').datepicker();
-
 
     // Bind events for expandable search forms.
     var searchForm = $('.search-form'),
