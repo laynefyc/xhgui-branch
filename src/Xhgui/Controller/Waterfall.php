@@ -30,7 +30,6 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
         if(isset($search['request_end']) && strpos($search['request_end'],'-')!==false)
         {
             $search['request_end'] = strtotime($search['request_end']);
-            //$search['request_end'] = date('Y-m-d H:i:s',$search['request_end']);
         }
 
         $result = $this->_profiles->getAll(array(
@@ -63,7 +62,8 @@ class Xhgui_Controller_Waterfall extends Xhgui_Controller
             'search' => $search,
             'paging' => $paging,
             'base_url' => 'waterfall.list',
-            'title' => '瀑布图'
+            'title' => '瀑布图',
+            'date_format' => $this->_app->config('date.format')
         ));
     }
 

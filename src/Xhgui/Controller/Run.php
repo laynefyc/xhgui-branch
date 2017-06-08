@@ -20,6 +20,18 @@ class Xhgui_Controller_Run extends Xhgui_Controller
                 $search[$key] = $request->get($key);
             }
         }
+
+        if(isset($search['date_start']) && strpos($search['date_start'],'-')!==false)
+        {
+            $search['date_start'] = strtotime($search['date_start']);
+        }
+
+        if(isset($search['date_end']) && strpos($search['date_end'],'-')!==false)
+        {
+            $search['date_end'] = strtotime($search['date_end']);
+        }
+
+
         $sort = $request->get('sort');
 
         $result = $this->_profiles->getAll(array(
@@ -49,6 +61,15 @@ class Xhgui_Controller_Run extends Xhgui_Controller
         );
 
         $this->_template = 'runs/list.twig';
+
+        if(isset($search['date_start'])&& strpos($search['date_start'],'-')===false)
+        {
+            $search['date_start'] = date('Y-m-d H:i:s',$search['date_start']);
+        }
+        if(isset($search['date_end'])&& strpos($search['date_end'],'-')===false)
+        {
+            $search['date_end'] = date('Y-m-d H:i:s',$search['date_end']);
+        }
         $this->set(array(
             'paging' => $paging,
             'base_url' => 'home',
