@@ -30,6 +30,7 @@ class Xhgui_Twig_Extension extends Twig_Extension
         return array(
             'simple_url' => new Twig_Filter_Function('Xhgui_Util::simpleUrl'),
             'as_bytes' => new Twig_Filter_Method($this, 'formatBytes', array('is_safe' => array('html'))),
+            'as_kbytes' => new Twig_Filter_Method($this, 'formatKbytes', array('is_safe' => array('html'))),
             'as_time' => new Twig_Filter_Method($this, 'formatTime', array('is_safe' => array('html'))),
             'as_diff' => new Twig_Filter_Method($this, 'formatDiff', array('is_safe' => array('html'))),
             'as_percent' => new Twig_Filter_Method($this, 'formatPercent', array('is_safe' => array('html'))),
@@ -97,6 +98,16 @@ class Xhgui_Twig_Extension extends Twig_Extension
             $val = round($value/1048576);
         }
         return $val . '&nbsp;<span class="units">MB</span>';
+    }
+
+    public function formatKbytes($value)
+    {
+        $val = round($value/1024,1);
+        if($val==0)
+        {
+            $val = round($value/1024);
+        }
+        return $val . '&nbsp;<span class="units">KB</span>';
     }
 
     public function formatTime($value)

@@ -104,7 +104,7 @@
           <dl>
           {% for value in memory %}
               <dt class="text-wrap">{{ value.name }}</dt>
-              <dd>{{ value.value }} MB</dd>
+              <dd>{{ value.value }} KB</dd>
           {% endfor %}
           </dl>
         </div>
@@ -149,12 +149,12 @@
         <td class="center">{{ value.ct }}</td>
         <td class="center">{{ value.ewt|as_time }}</td>
         <td class="center">{{ value.ecpu|as_time }}</td>
-        <td class="center">{{ value.emu|as_bytes }}</td>
-        <td class="center">{{ value.epmu|as_bytes }}</td>
+        <td class="center">{{ value.emu|as_kbytes }}</td>
+        <td class="center">{{ value.epmu|as_kbytes }}</td>
         <td class="center">{{ value.wt|as_time }}</td>
         <td class="center">{{ value.cpu|as_time }}</td>
-        <td class="center">{{ value.mu|as_bytes }}</td>
-        <td class="center">{{ value.pmu|as_bytes }}</td>
+        <td class="center">{{ value.mu|as_kbytes }}</td>
+        <td class="center">{{ value.pmu|as_kbytes }}</td>
     </tr>
     {% endfor %}
     </tbody>

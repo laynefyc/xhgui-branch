@@ -84,13 +84,13 @@ class Xhgui_Controller_Run extends Xhgui_Controller
         // Memory Block
         $memoryChart = $result->extractDimension('emu', $detailCount);
 
-        foreach($timeChart as $k=>$val){
-            $v = round($val['value']/1048576,1);
+        foreach($memoryChart as $k=>$val){
+            $v = round($val['value']/1024,1);
             if($v==0)
             {
-                $v = round($val['value']/1048576);
+                $v = round($val['value']/1024);
             }
-            $timeChart[$k]['value'] = $v;
+            $memoryChart[$k]['value'] = $v;
         }
 
         // Watched Functions Block
