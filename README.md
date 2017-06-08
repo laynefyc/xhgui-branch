@@ -1,9 +1,9 @@
-##xhgui汉化与更新
+## xhgui汉化与更新
 
 
 xhgui的安装信息可到源项目查看文档：[xhgui](https://github.com/perftools/xhgui)  如果不能安装成功可到我博客看这篇文章：[Tideways和xhgui打造PHP非侵入式监控平台](http://blog.it2048.cn/article_tideways-xhgui.html) 
 
-###关于此项目
+### 关于此项目
 
 1. 站在举人的肩膀上
 
