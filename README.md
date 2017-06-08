@@ -17,3 +17,4 @@ xhgui的安装信息可到源项目查看文档：[xhgui](https://github.com/per
 
 3. 界面截图如下；
 	
+screenshots

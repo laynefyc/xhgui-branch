@@ -94,9 +94,9 @@ Xhgui.waterfall = function (el, options) {
             },
             formatter: function (d, i) {
                 var urlName = '?id=' + encodeURIComponent(d.id);
-                var label = '<strong>' + d.title + '</strong>' +
-                    ' <a href="' + options.baseUrl + urlName + '">view</a> <br />' +
-                    ' Duration ' + Xhgui.formatNumber(d.duration) + ' <span class="units">µs</span> ';
+                var label = '<strong>' + decodeURIComponent(d.title) + '</strong>' +
+                    ' <a href="' + options.baseUrl + urlName + '">详情</a> <br />' +
+                    ' 耗时 ' + Xhgui.formatNumber(d.duration) + ' <span class="units">ms</span> ';
                 return label;
             }
         });
