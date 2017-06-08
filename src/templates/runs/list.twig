@@ -18,14 +18,15 @@
         <div class="control-group span4">
             <label class="control-label" for="start_date">时间范围</label>
             <div class="controls">
-                <input type="text" style="width: 150px;" name="date_start" value="{{ search.date_start }}" placeholder="自定义日期格式" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
-                <input type="text" style="width: 150px;" name="date_end" value="{{ search.date_end }}" placeholder="自定义日期格式" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                <input type="text" style="width: 80px;" name="date_start" value="{{ search.date_start }}" placeholder="自定义日期格式" onclick="laydate({ istime: true, format: 'YYYY-MM-DD'})">
+                <input type="text" style="width: 80px;" name="date_end" value="{{ search.date_end }}" placeholder="自定义日期格式" onclick="laydate({ istime: true, format: 'YYYY-MM-DD'})">
             </div>
         </div>
         <div class="control-group span4">
             <label class="control-label" for="url">请求地址</label>
             <div class="controls">
                 <input type="text" id="url" name="url" value="{{ search.url }}">
+                <input type="hidden" name="sort" value="{{ paging.sort }}">
             </div>
         </div>
         <div class="form-actions">
