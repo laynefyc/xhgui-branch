@@ -21,13 +21,13 @@
                 <input type="text" style="width: 150px;" name="request_end" value="{{ search.request_end }}" placeholder="结束时间" onclick="laydate({ istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
             </div>
         </div>
-        <div class="control-group span4">
+        <div class="control-group span2">
             <label class="control-label" for="remote_addr">IP</label>
             <div class="controls">
-                <input type="text" id="remote_addr" name="remote_addr" value="{{ search.remote_addr }}">
+                <input type="text" style="width: 150px;" id="remote_addr" name="remote_addr" value="{{ search.remote_addr }}">
             </div>
         </div>
-        <div class="control-group span4">
+        <div class="control-group span3">
             <label class="control-label" for="cookie">Cookie</label>
             <div class="controls">
                 <input type="text" id="cookie" name="cookie" value="{{ search.cookie }}">
