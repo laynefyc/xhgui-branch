@@ -6,22 +6,22 @@
 <div class="span9">
   <div class="row-fluid">
 
-    <div class="span3">
+    <div class="span5">
       <h2>选择查询条件</h2>
       <form>
-        <textarea id="selection">{"meta.url" : "/index.php"}</textarea>
+        <textarea style="width: 300px;height: 80px;" id="selection">{"meta.url" : "/index.php"}</textarea>
       </form>
     </div><!--/span-->
 
 
-    <div class="span3">
-      <h2>选择需要显示的数据项</h2>
+    <div class="span5">
+      <h2>选择显示的参数</h2>
       <form>
-        <textarea id="retrieve">{"meta" : true, "profile.main()" : true}</textarea>
+        <textarea style="width: 300px;height: 80px;" id="retrieve">{"meta" : true, "profile.main()" : true}</textarea>
       </form>
     </div><!--/span-->
     
-    <div class="span3">
+    <div class="span2">
       <h2>帮助</h2>
       <p>别担心, <a href="{{ url('custom.help') }}">有指南</a>。</p>
     
