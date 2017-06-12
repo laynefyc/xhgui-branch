@@ -19,13 +19,13 @@ xhgui源项目已经很久不更新了。我在基于xhgui搭建PHP监控平台�
 
 ### 三. 界面截图
 首页截图
-![首页截图](https://github.com/laynefyc/xhgui/raw/screenshot/screenshot/homepage.png)
+![首页截图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/homepage.png)
 
 瀑布图
-![瀑布图](https://github.com/laynefyc/xhgui/raw/screenshot/screenshot/waterfall.png)
+![瀑布图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/waterfall.png)
 
 函数监控图
-![函数监控图](https://github.com/laynefyc/xhgui/raw/screenshot/screenshot/view-function.png)
+![函数监控图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/view-function.png)
 	
 ### 四. 更新日志
 1. 将时间选择控件换成了更符合国人使用习惯的laydate;
