@@ -1,6 +1,6 @@
 {
-    "name": "perftools/xhgui",
-    "description": "A web based interface for viewing profile data collected by XHProf.",
+    "name": "laynefyc/xhgui",
+    "description": "From perftools/xhgui,A web based interface for viewing profile data collected by XHProf.",
     "license": "MIT",
     "autoload": {
         "psr-0": {
