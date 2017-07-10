@@ -1,5 +1,5 @@
 {
-    "name": "laynefyc/xhgui",
+    "name": "laynefyc/xhgui-chinese",
     "description": "From perftools/xhgui,A web based interface for viewing profile data collected by XHProf.",
     "license": "MIT",
     "autoload": {
