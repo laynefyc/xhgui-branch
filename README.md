@@ -7,6 +7,10 @@ xhgui的安装信息可到源项目查看文档：[xhgui](https://github.com/per
 
 当然最好的方式就是联系我,我的博客：[http://blog.it2048.cn](http://blog.it2048.cn)
 
+[![Latest Stable Version](https://poser.pugx.org/laynefyc/xhgui-chinese/v/stable.png)](https://packagist.org/packages/laynefyc/xhgui-chinese)
+[![Total Downloads](https://poser.pugx.org/laynefyc/xhgui-chinese/downloads.png)](https://packagist.org/packages/laynefyc/xhgui-chinese)
+[![Build Status](https://travis-ci.org/laynefyc/xhgui-branch.svg?branch=master)](https://travis-ci.org/laynefyc/xhgui-branch)
+
 ### 一. 站在举人的肩膀上
 
 项目的汉化参考了 [https://github.com/snfnwgi/xhgui](https://github.com/snfnwgi/xhgui)，对部分翻译不够准确的词做了修改，对未翻译的部分做了翻译。
@@ -41,6 +45,7 @@ xhgui源项目已经很久不更新了。我在基于xhgui搭建PHP监控平台�
 
 ### 五. TODO
 1. 将前端展示页面抽离出来；
+2. 支持多域名的显示；
 
 ### 六. 通过Composer安装&更新
 
