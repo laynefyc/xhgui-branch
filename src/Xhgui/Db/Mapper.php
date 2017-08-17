@@ -80,16 +80,10 @@ class Xhgui_Db_Mapper
                 $conditions['meta.request_ts']['$gte'] = new MongoDate(time() + 86400);
             }
         }
-
+      
         if (isset($search['url'])) {
-            // Not sure if letting people use regex here
-            // is a good idea. Only one way to find out.
-            $conditions['meta.url'] = array(
-                '$regex' => (string)$search['url'],
-                '$options' => 'i',
-            );
+            $conditions['meta.url'] = (string)$search['url'];
         }
-
         return $conditions;
     }
 
