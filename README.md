@@ -57,3 +57,4 @@ composer require laynefyc/xhgui-chinese
 1. 如果数据显示不全，内存和执行等信息都是空，请排查PHP扩展程序，tideways和xhprof并不支持所有操作系统和所有PHP版本；
 2. 如果mongoDB中的数据是空，请检查mongoDB的配置，header.php文件的引入是否规范；
 3. 提交Issues请带上操作系统，PHP版本，扩展名和扩展版本。只提供一句话很难给你建议；
+4. 历史问题在这里 [https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue](https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue)
