@@ -6,7 +6,7 @@ return array(
     'debug' => false,
     'mode' => 'development',
     /*
-     * support extension: uprofiler, tideways, xhprof
+     * support extension: uprofiler, tideways_xhprof, tideways, xhprof
      * default: xhprof
      */
     'extension' => 'xhprof',
