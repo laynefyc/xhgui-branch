@@ -1,4 +1,7 @@
 
+## 最新
+有同学希望能显示SQL和执行时间，这也是比较实用的功能，这两天我会加上。 -- 2018-05-15 
+
 ## xhgui汉化与更新
 
 xhgui的安装信息可到源项目查看文档：[xhgui](https://github.com/perftools/xhgui)  
