@@ -15,6 +15,7 @@ class Xhgui_Profile
     protected $_collapsed;
     protected $_indexed;
     protected $_visited;
+    protected $_sql = array();
 
     protected $_keys = array('ct', 'wt', 'cpu', 'mu', 'pmu');
     protected $_exclusiveKeys = array('ewt', 'ecpu', 'emu', 'epmu');
@@ -26,6 +27,7 @@ class Xhgui_Profile
         if (!empty($profile['profile']) && $convert) {
             $this->_process();
         }
+        $this->_sql = isset($profile['sql'])?$profile['sql']:array();
     }
 
     /**
@@ -124,6 +126,10 @@ class Xhgui_Profile
         return $this->_collapsed;
     }
 
+    public function getSQL()
+    {
+        return $this->_sql;
+    }
     public function getId()
     {
         return $this->_data['_id'];

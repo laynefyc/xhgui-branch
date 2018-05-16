@@ -40,6 +40,10 @@ return array(
 
     'profiler.simple_url' => function($url) {
         return preg_replace('/\=\d+/', '', $url);
-    }
+    },
+
+    'profiler.filter_path' => array(
+        //'/home/admin/www/xhgui/webroot','F:/phpPro'
+    )
 
 );

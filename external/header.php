@@ -73,6 +73,11 @@ if (file_exists($dir . '/config/config.php')) {
 }
 unset($dir);
 
+$filterPath = Xhgui_Config::read('profiler.filter_path');
+if(is_array($filterPath)&&in_array($_SERVER['DOCUMENT_ROOT'],$filterPath)){
+    return;
+}
+
 if ((!extension_loaded('mongo') && !extension_loaded('mongodb')) && Xhgui_Config::read('save.handler') === 'mongodb') {
     error_log('xhgui - extension mongo not loaded');
     return;
@@ -92,7 +97,8 @@ if ($extension == 'uprofiler' && extension_loaded('uprofiler')) {
 } else if ($extension == 'tideways_xhprof' && extension_loaded('tideways_xhprof')) {
     tideways_xhprof_enable(TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_MEMORY_MU | TIDEWAYS_XHPROF_FLAGS_MEMORY_PMU | TIDEWAYS_XHPROF_FLAGS_CPU);
 } else if ($extension == 'tideways' && extension_loaded('tideways')) {
-    tideways_enable(TIDEWAYS_FLAGS_CPU | TIDEWAYS_FLAGS_MEMORY | TIDEWAYS_FLAGS_NO_SPANS);
+    tideways_enable(TIDEWAYS_FLAGS_CPU | TIDEWAYS_FLAGS_MEMORY);
+    tideways_span_create('sql');
 } else {
     if (PHP_MAJOR_VERSION == 5 && PHP_MINOR_VERSION > 4) {
         xhprof_enable(XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS);
@@ -110,17 +116,32 @@ register_shutdown_function(
             $data['profile'] = tideways_xhprof_disable();
         } else if ($extension == 'tideways' && extension_loaded('tideways')) {
             $data['profile'] = tideways_disable();
+            $sqlData = tideways_get_spans();
+            $data['sql'] = array();
+            if(isset($sqlData[1])){
+                foreach($sqlData as $val){
+                    if(isset($val['n'])&&$val['n'] === 'sql'&&isset($val['a'])&&isset($val['a']['sql'])){
+                        $_time_tmp = (isset($val['b'][0])&&isset($val['e'][0]))?($val['e'][0]-$val['b'][0]):0;
+                        if(!empty($val['a']['sql'])){
+                            $data['sql'][] = [
+                                'time' => $_time_tmp,
+                                'sql' => $val['a']['sql']
+                            ];
+                        }
+                    }
+                }
+            }
         } else {
             $data['profile'] = xhprof_disable();
         }
-
+        
         // ignore_user_abort(true) allows your PHP script to continue executing, even if the user has terminated their request.
         // Further Reading: http://blog.preinheimer.com/index.php?/archives/248-When-does-a-user-abort.html
         // flush() asks PHP to send any data remaining in the output buffers. This is normally done when the script completes, but
         // since we're delaying that a bit by dealing with the xhprof stuff, we'll do it now to avoid making the user wait.
         ignore_user_abort(true);
         flush();
-
+    
         if (!defined('XHGUI_ROOT_DIR')) {
             require dirname(dirname(__FILE__)) . '/src/bootstrap.php';
         }
@@ -154,7 +175,6 @@ register_shutdown_function(
             'SERVER' => $_SERVER,
             'get' => $_GET,
             'env' => $_ENV,
-            'simple_url' => Xhgui_Util::simpleUrl($uri),
             'request_ts' => $requestTs,
             'request_ts_micro' => $requestTsMicro,
             'request_date' => date('Y-m-d', $time),
