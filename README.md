@@ -1,6 +1,6 @@
 
 ## 最新
-有同学希望能显示SQL和执行时间，这也是比较实用的功能，这两天我会加上。 -- 2018-05-15 
+已添加SQL列表与SQL执行时间展示（暂时只支持tideways扩展），下文有截图。 
 
 ## xhgui汉化与更新
 
@@ -34,6 +34,9 @@ xhgui源项目已经很久不更新了。我在基于xhgui搭建PHP监控平台�
 函数监控图
 ![函数监控图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/view-function.png)
 	
+SQL列表
+![SQL列表](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/sql_list.png)
+
 ### 四. 更新日志
 1. 将时间选择控件换成了更符合国人使用习惯的laydate;
 2. 将时间的格式转换成了 2017-06-08 12:18:18 格式；
