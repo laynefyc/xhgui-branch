@@ -112,7 +112,8 @@ class Xhgui_Controller_Run extends Xhgui_Controller
             'memory' => $memoryChart,
             'watches' => $watchedFunctions,
             'date_format' => $this->_app->config('date.format'),
-            'title' => '函数监控'
+            'title' => '函数监控',
+            'sql' => $result->getSQL()
         ));
     }
 

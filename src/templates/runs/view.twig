@@ -48,7 +48,7 @@
             跳转到函数
         </a>
 
-        <h2>监控的函数</h2>
+        <h3>监控的函数</h3>
 
         <table class="table table-hover">
         <thead>
@@ -84,11 +84,33 @@
         {% endfor %}
         </tbody>
         </table>
+
+        <h3>SQL执行详情</h3>
+        <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>执行时间</th>
+                <th>执行SQL</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for value in sql %}
+        <tr>
+            <td>{{ value.time|as_time }}</td>
+            <td>{{ value.sql }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="4">
+            没有SQL调用
+        </td></tr>
+        {% endfor %}
+        </tbody>
+        </table>
     </div>
 
     <div class="row-fluid">
         <div class="span6">
-          <h2>执行耗时图</h2>
+          <h3>执行耗时图</h3>
           <div id="wall-time-chart" class="chart-container"></div>
           <dl>
           {% for value in wall_time %}
@@ -99,7 +121,7 @@
         </div>
 
         <div class="span6">
-          <h2>内存消耗图</h2>
+          <h3>内存消耗图</h3>
           <div id="memory-usage-chart" class="chart-container"></div>
           <dl>
           {% for value in memory %}

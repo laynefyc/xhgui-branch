@@ -7,7 +7,7 @@
 {% block content %}
 <div class="row-fluid">
     <a class="back-link" href="{{ url('run.view', {'id': profile.id|trim}) }}">&laquo; 返回</a>
-    <h1>调用图： {{ profile.meta.url }}</h1>
+    <h3>调用图： {{ profile.meta.url }}</h3>
     <h4>{{ profile.meta('SERVER.REQUEST_TIME')|date(date_format) }}</h4>
 </div>
 
