@@ -175,6 +175,7 @@ register_shutdown_function(
             'SERVER' => $_SERVER,
             'get' => $_GET,
             'env' => $_ENV,
+            'simple_url' => Xhgui_Util::simpleUrl($uri),
             'request_ts' => $requestTs,
             'request_ts_micro' => $requestTsMicro,
             'request_date' => date('Y-m-d', $time),
