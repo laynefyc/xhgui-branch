@@ -4,8 +4,8 @@ about: Create a report to help us improve
 
 ---
 
-**BUG描述**
-在提交BUG之前请查阅README文件，常见的安装与配置问题都有对应解决办法 。再查看历史ISSUE [ISSUE](https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue) 看是否有答案。都解决不了，请认真填写如下信息
+**一定要读**
+在提交BUG之前请查阅README文件，常见的安装与配置问题都有对应解决办法 。再查看历史ISSUE https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue 是否有答案。都解决不了，请认真填写如下信息
 
 **版本信息:**
  - 操作系统: [e.g. CentOS 6.8]
