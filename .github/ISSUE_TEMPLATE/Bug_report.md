@@ -5,31 +5,19 @@ about: Create a report to help us improve
 ---
 
 **BUG描述**
-在说明BUG之前请查阅README文件，底部有常见问题的解决办法 。如果未能解决请清晰你的BUG。
+在提交BUG之前请查阅README文件，常见的安装与配置问题都有对应解决办法 。再查看历史ISSUE [ISSUE](https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue) 看是否有答案。都解决不了，请认真填写如下信息
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**版本信息:**
+ - 操作系统: [e.g. CentOS 6.8]
+ - PHP [e.g. PHP7.1.13]
+ - 扩展 [e.g. tideway.so v1.1.14]
+ - MongodDB 版本 [e.g. MongodDB v4.0.4]
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**PHP信息:**
+1. 运行php -m 将结果粘贴到当前文本中
+2. 重启php-fpm 问题是否还在？
+3. 直接在浏览器中访问 http://test.com/xhgui-branch/external/header.php  （修改为自己的URL）是否报错
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**具体报错信息：**
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
