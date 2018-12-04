@@ -1,5 +1,14 @@
 
 ## 最新
+获取底层信息的PHP扩展很多，比如 uprofiler,tideways_xhprof,tideways,xhprof等，他们的原理都一样，只是兼容性与稳定性的差别（选择一个安装，安装多个会冲突）。
+
+````
+Class 'MongoClient' not found
+Fatal error: Call to undefined function xhprof_enable()
+````
+如出现上面的报错信息，请使用`php -m` 查看 https://github.com/laynefyc/xhgui-branch/blob/ad6e0c0a3eaf9b5b0438cd4a3d3db937f1954058/config/config.default.php#L12 配置文件的扩展名和自己安装的扩展名是否一致。 
+
+90%的问题都能在 **ISSUE** 中找到答案 https://github.com/laynefyc/xhgui-branch/issues?q=is%3Aissue+is%3Aclosed 
 
 tideways的新版扩展已经更名，并且不支持SQL显示，建议使用支持SQL展示的V4版本  https://github.com/tideways/php-xhprof-extension/tree/v4.1.6   
 
