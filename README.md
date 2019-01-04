@@ -6,7 +6,7 @@
 Class 'MongoClient' not found
 Fatal error: Call to undefined function xhprof_enable()
 ````
-如出现上面的报错信息，请使用`php -m` 查看 [config/config.default.php#L12](https://github.com/laynefyc/xhgui-branch/blob/ad6e0c0a3eaf9b5b0438cd4a3d3db937f1954058/config/config.default.php#L12) 配置文件的扩展名和自己安装的扩展名是否一致。 
+如出现上面的报错信息，请使用`php -m` 看看是否有tideways或者tideways_xhprof扩展。 再修改 [config/config.default.php#L12](https://github.com/laynefyc/xhgui-branch/blob/ad6e0c0a3eaf9b5b0438cd4a3d3db937f1954058/config/config.default.php#L12) 配置文件的扩展名。 
 
 90%的问题都能在 **ISSUE** 中找到答案 [ISSUE](https://github.com/laynefyc/xhgui-branch/issues?q=is%3Aissue+is%3Aclosed) 
 
