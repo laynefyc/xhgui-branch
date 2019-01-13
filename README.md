@@ -1,5 +1,7 @@
 
 ## 最新
+2019年想定个目标 - 重写xhprof扩展和xhgui-branch，有兴趣的朋友请移步到我的博客留言交流一下 [我的博客](http://blog.it2048.cn/)
+
 获取底层信息的PHP扩展很多，比如 uprofiler,tideways_xhprof,tideways,xhprof等，他们的原理都一样，只是兼容性与稳定性的差别（选择一个安装，安装多个会冲突）。
 
 ````
