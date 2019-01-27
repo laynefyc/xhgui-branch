@@ -85,7 +85,7 @@ composer require laynefyc/xhgui-chinese
 
 ## 八. 既然看到这了不如加个微信吧
 
-![https://github.com/laynefyc/xhgui-branch/blob/screenshot/screenshot/code-log.png](https://github.com/laynefyc/xhgui-branch/blob/screenshot/screenshot/code-log.png)
+![https://github.com/laynefyc/xhgui-branch/blob/screenshot/screenshot/code-log1.png](https://github.com/laynefyc/xhgui-branch/blob/screenshot/screenshot/code-log1.png)
 
 [http://imgs.it2048.cn/code-log.png](http://imgs.it2048.cn/code-log.png)
 
