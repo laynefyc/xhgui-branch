@@ -82,3 +82,8 @@ composer require laynefyc/xhgui-chinese
 2. 如果mongoDB中的数据是空，请检查mongoDB的配置，header.php文件的引入是否规范；
 3. 提交Issues请带上操作系统，PHP版本，扩展名和扩展版本。只提供一句话很难给你建议；
 4. 历史问题在这里 [https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue](https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue)
+
+## 八. 既然看到这了不如加个微信吧
+
+![](http://imgs.it2048.cn/%E6%89%AB%E7%A0%81_%E6%90%9C%E7%B4%A2%E8%81%94%E5%90%88%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E5%BE%AE%E4%BF%A1%E6%A0%87%E5%87%86%E7%BB%BF%E7%89%88.png)
+
