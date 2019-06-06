@@ -1,5 +1,8 @@
 
 ## 最新
+
+提交Issue之前请看看 README.md(当前页面)和历史已经处理的 [Closed Issue](https://github.com/laynefyc/xhgui-branch/issues?q=is%3Aissue+is%3Aclosed)90%的问题都能找到答案。另外10%的问题请按照Issue模板中需要的信息提交，你提供的信息越多我越能给你准确的建议，不按照规范提交的Issue我会直接关闭。
+
 2019年想定个目标 - 重写xhprof扩展和xhgui-branch，有兴趣的朋友请移步到我的博客留言交流一下 [我的博客](http://blog.it2048.cn/)
 
 获取底层信息的PHP扩展很多，比如 uprofiler,tideways_xhprof,tideways,xhprof等，他们的原理都一样，只是兼容性与稳定性的差别（选择一个安装，安装多个会冲突）。
@@ -15,8 +18,6 @@ Fatal error: Call to undefined function xhprof_enable()
 tideways的新版扩展已经更名，并且不支持SQL显示，建议使用支持SQL展示的V4版本  [v4.1.6](https://github.com/tideways/php-xhprof-extension/tree/v4.1.6)   
 
 如果一定要使用V5版本，请修改配置文件   [config/config.default.php#L12](https://github.com/laynefyc/xhgui-branch/blob/ad6e0c0a3eaf9b5b0438cd4a3d3db937f1954058/config/config.default.php#L12)  为 tideways_xhprof
-
-英文好的朋友请联系我，一起扩充多语言版本（包括文档与代码）。
 
 已添加SQL列表与SQL执行时间展示（暂时只支持tideways扩展），下文有截图。 
 
