@@ -31,7 +31,7 @@ xhgui的安装信息可到源项目查看文档：[xhgui](https://github.com/per
 
 如果不能安装成功可到我博客看这篇文章：[Tideways和xhgui打造PHP非侵入式监控平台](http://blog.it2048.cn/article_tideways-xhgui.html) 
 
-当然最好的方式就是联系我,我的博客：[http://blog.it2048.cn](http://blog.it2048.cn)
+当然最好的方式就是联系我,我的博客：[https://blog.it2048.cn](https://blog.it2048.cn)
 
 [![Latest Stable Version](https://poser.pugx.org/laynefyc/xhgui-chinese/v/stable.png)](https://packagist.org/packages/laynefyc/xhgui-chinese)
 [![Total Downloads](https://poser.pugx.org/laynefyc/xhgui-chinese/downloads.png)](https://packagist.org/packages/laynefyc/xhgui-chinese)
