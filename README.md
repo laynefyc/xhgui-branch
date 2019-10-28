@@ -45,4 +45,52 @@ xhgui源项目已经很久不更新了。我在基于xhgui搭建PHP监控平台�
 
 ### 二. 为什么不直接在源项目提交Merge Request？
 
-我会将一些基本的语法Bug修复后提交Merge Request。但汉化的修改不会提，主要原因是xhgui源项目对代码的要求基本是可用就可的程度，后期扩展的添加混乱的一塌糊涂。维护代码的人也焦头烂额，很多显而易见的错误都没人修。我无法保证我提的代码被及时的采纳。xhgui的UI主要是针对老外设计的，很多符号和数
+我会将一些基本的语法Bug修复后提交Merge Request。但汉化的修改不会提，主要原因是xhgui源项目对代码的要求基本是可用就可的程度，后期扩展的添加混乱的一塌糊涂。维护代码的人也焦头烂额，很多显而易见的错误都没人修。我无法保证我提的代码被及时的采纳。xhgui的UI主要是针对老外设计的，很多符号和数据单位我看着不习惯，一些交互也不友好，这个项目主要会对这方面做改动所以不适合提交Merge Request。
+
+### 三. 界面截图
+首页截图
+![首页截图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/homepage.png)
+
+瀑布图
+![瀑布图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/waterfall.png)
+
+函数监控图
+![函数监控图](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/view-function.png)
+
+SQL列表
+![SQL列表](https://github.com/laynefyc/xhgui-branch/raw/screenshot/screenshot/sql_list.png)
+
+### 四. 更新日志
+1. 将时间选择控件换成了更符合国人使用习惯的laydate;
+2. 将时间的格式转换成了 2017-06-08 12:18:18 格式；
+3. 将微妙转换成了毫秒，byte转换成了MB或者KB；
+4. 添加了IP的展示；
+5. 将中文URL做了url_decode();
+6. 将页面的大标题去掉，换成用颜色选中的Nav标签展示；
+7. 修复了『自定义函数』功能无法使用的问题；
+8. 翻译了大量英文描述；
+9. 很多小Tips等待有心人去发现；
+10. 支持composer更新；
+
+### 五. TODO
+1. 将前端展示页面抽离出来；
+2. 支持多域名的显示；
+
+### 六. 通过Composer安装&更新
+
+````bash
+composer require laynefyc/xhgui-chinese
+````
+
+### 七. 常见问题
+1. 如果数据显示不全，内存和执行等信息都是空，请排查PHP扩展程序，tideways和xhprof并不支持所有操作系统和所有PHP版本；
+2. 如果mongoDB中的数据是空，请检查mongoDB的配置，header.php文件的引入是否规范；
+3. 提交Issues请带上操作系统，PHP版本，扩展名和扩展版本。只提供一句话很难给你建议；
+4. 历史问题在这里 [https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue](https://github.com/laynefyc/xhgui-branch/issues?utf8=%E2%9C%93&q=is%3Aissue)
+
+## 八. 既然看到这了不如加个微信吧
+
+![https://github.com/laynefyc/xhgui-branch/blob/screenshot/screenshot/code-log1.png](https://github.com/laynefyc/xhgui-branch/blob/screenshot/screenshot/code-log1.png)
+
+[http://imgs.it2048.cn/code-log.png](http://imgs.it2048.cn/code-log.png)
+
