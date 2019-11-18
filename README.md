@@ -1,9 +1,12 @@
 
 ## 最新
 
-#### 抱歉……新版国庆前应该是发不出了。最近老婆把晚上哄娃的任务交给了我，挤出来的时间越来越少，还很零碎，不适合写代码，但还是会更新博客的，新版本需要搁置一段时间。博客的文章大部分都同步到公众号了，叫《城边编程》，面试啊、技术、职场、挖洞啥的都会吹一吹，有兴趣的可以关注一波。
+新版本已经在开发中，后端功能全部开发完成，前端页面开发还在努力中。由于前端技术更新太快，不打算jQuery一把梭了，新版本会用上vue或者react，所以我也是边学习边开发。
 
-新版本已经在开发中，后端功能全部开发完成，前端页面开发还在努力中。由于前端技术更新太快，不打算jQuery一把梭了，新版本会用上vue或者react，所以我也是边学习边开发。尝试过很多后台UI方案，比如antd pro和vue-element-admin，最后选择了vue-element-admin，快的话国庆前能发个beta版本。
+公众号写了有一段时间，里面的内容也充实了不少，相比博客质量更高一些，有兴趣的关注看看。
+
+![http://imgs.it2048.cn/code-log.png](http://imgs.it2048.cn/code-log.png)
+[http://imgs.it2048.cn/code-log.png](http://imgs.it2048.cn/code-log.png)
 
 提交Issue之前请看看 README.md(当前页面)和历史已经处理的 [Closed Issue](https://github.com/laynefyc/xhgui-branch/issues?q=is%3Aissue+is%3Aclosed)90%的问题都能找到答案。另外10%的问题请按照Issue模板中需要的信息提交，你提供的信息越多我越能给你准确的建议，不按照规范提交的Issue我会直接关闭。
 
