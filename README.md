@@ -3,9 +3,8 @@
 
 新版本已经在开发中，后端功能全部开发完成，前端页面开发还在努力中。由于前端技术更新太快，不打算jQuery一把梭了，新版本会用上vue或者react，所以我也是边学习边开发。
 
-公众号写了有一段时间，里面的内容也充实了不少，相比博客质量更高一些，有兴趣的关注看看。
+公众号写了有一段时间，里面的内容也充实了不少，相比博客质量更高一些，分享的内容更成体系，有兴趣的关注看看。
 
-![http://imgs.it2048.cn/code-log.png](http://imgs.it2048.cn/code-log.png)
 [http://imgs.it2048.cn/code-log.png](http://imgs.it2048.cn/code-log.png)
 
 提交Issue之前请看看 README.md(当前页面)和历史已经处理的 [Closed Issue](https://github.com/laynefyc/xhgui-branch/issues?q=is%3Aissue+is%3Aclosed)90%的问题都能找到答案。另外10%的问题请按照Issue模板中需要的信息提交，你提供的信息越多我越能给你准确的建议，不按照规范提交的Issue我会直接关闭。
