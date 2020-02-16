@@ -127,10 +127,10 @@ register_shutdown_function(
                     if(isset($val['n'])&&$val['n'] === 'sql'&&isset($val['a'])&&isset($val['a']['sql'])){
                         $_time_tmp = (isset($val['b'][0])&&isset($val['e'][0]))?($val['e'][0]-$val['b'][0]):0;
                         if(!empty($val['a']['sql'])){
-                            $data['sql'][] = [
+                            $data['sql'][] = array(
                                 'time' => $_time_tmp,
                                 'sql' => $val['a']['sql']
-                            ];
+                            );
                         }
                     }
                 }
