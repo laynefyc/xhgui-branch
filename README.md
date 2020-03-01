@@ -2,9 +2,13 @@
 新版本已开发完成，做了如下改进：
 
 🌈 支持本地Sqlite存储，也支持MySQL和MongoDB存储。
+
 🌍 国际化，支持英语/简体中文/繁体中文。
+
 🛡 可通过Composer极速安装。
+
 🎨 一句命令运行监控服务。
+
 🌈 支持帐号密码登录。
 
 更多新功能欢迎前往 https://github.com/laynefyc/php-monitor 体验。
