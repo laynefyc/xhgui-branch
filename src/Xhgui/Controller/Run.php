@@ -212,7 +212,7 @@ class Xhgui_Controller_Run extends Xhgui_Controller
             'base_url' => 'run.compare',
             'base_run' => $baseRun,
             'head_run' => $headRun,
-            'candidates' => $candidates ? $candidates : [],
+            'candidates' => $candidates ? $candidates : array(),
             'url_params' => $request->get(),
             'date_format' => $this->_app->config('date.format'),
             'comparison' => $comparison,
